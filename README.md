@@ -31,7 +31,7 @@ The objective is to identify root causes and recommend data-driven strategies to
 ## 🔍 Key Insights
 
 * Revenue declined by ~22% despite stable occupancy → indicates pricing inefficiencies
-* Weekends show higher ADR and RevPAR compared to weekdays
+* Weekends show same ADR and RevPAR as weekdays, indicating static pricing strategy
 * High cancellations & no-shows (~40K+) are significantly impacting realized revenue
 * Mumbai leads in revenue generation, while some cities underperform in RevPAR
 * Hyderabad shows lower RevPAR, indicating an underperforming market
