@@ -5,13 +5,9 @@
   <img src="images/Dashboard.png" width="800"/>
 </p>
 
-This project analyzes hotel performance across multiple cities to identify revenue decline, pricing inefficiencies, and booking behavior patterns.
+This project presents an end-to-end Power BI dashboard built to analyze hospitality revenue performance across multiple cities, properties, and booking channels.
 
-The dashboard focuses on answering:
-
-* What is happening to revenue?
-* Why is performance declining?
-* What actions can improve profitability?
+The objective is to help hotel management teams optimize pricing, improve occupancy, and maximize revenue using data-driven insights.
 
 ---
 
@@ -24,48 +20,64 @@ The objective is to identify root causes and recommend data-driven strategies to
 
 ## 📊 Key Metrics Used
 
-* **Revenue**
-* **RevPAR (Revenue per Available Room)**
-* **ADR (Average Daily Rate)**
-* **DBRN (Daily Bookable Room Nights)**
-* **DSRN (Daily Sellable Room Nights)**
-* **DURN (Daily Utilized Room Nights)**
-* **Occupancy %**
-* **Realisation %**
+* Revenue: 1.70Bn
+* RevPAR: 7.41K
+* Occupancy Rate: 57.8%
+* ADR (Average Daily Rate): 12.69K
+* Realization Rate: 70.1%
 
 ---
 
 ## 🔍 Key Insights
 
-* Revenue declined by **~22% WoW**, while occupancy remained relatively stable
-* Indicates **pricing inefficiency (ADR misalignment)**
-* High **cancellations and no-shows** are reducing realised revenue
-* **Hyderabad** underperforms in RevPAR compared to other cities
-* Weekends perform better > demand is unevenly distributed
+* Revenue declined by ~22% despite stable occupancy → indicates pricing inefficiencies
+* Weekends show higher ADR and RevPAR compared to weekdays
+* High cancellations & no-shows (~40K+) are significantly impacting realized revenue
+* Mumbai leads in revenue generation, while some cities underperform in RevPAR
+* Hyderabad shows lower RevPAR, indicating an underperforming market
+* Luxury category contributes higher revenue compared to business hotels
+
+---
+
+## 📊 Dashboard Features
+* Dynamic time filtering (Week-wise analysis)
+* City & Property-level drill-down
+* Room class segmentation
+* Trend analysis of key metrics
+* Performance matrix (ADR vs Occupancy)
+* Day-type comparison (Weekday vs Weekend)
+
+---
+
+## 🏗️ Data Model
+* Designed using Star Schema for performance optimization
+* Tables:
+  Fact Table - Bookings, Aggregated_Bookings
+  Dimension Tables - Date, Hotels, Room
+
+---
+
+## ⚙️ Tools & Skills
+* Power BI
+* DAX (Data Analysis Expressions)
+* Data Modeling
+* Business Intelligence
 
 ---
 
 ## 🚀 Recommendations
 
-* Implement **dynamic pricing strategy (demand-based ADR)**
-* Introduce **prepaid booking incentives** to reduce cancellations
-* Improve **weekday occupancy** through targeted offers
-* Focus on **underperforming cities & properties**
+* Implement dynamic pricing strategies based on demand
+* Increase prices during high-demand weekends
+* Reduce cancellations through advance booking incentives
+* Improve underperforming markets (e.g., Hyderabad)
+* Focus on optimizing RevPAR instead of just occupancy
 
 ---
 
 ## 🌐 Live Dashboard
 
 👉 [Click here to view the interactive dashboard](https://app.powerbi.com/view?r=eyJrIjoiZDMxYTQyODgtZGRiZC00ZjFlLWEzYzAtMzM5ZDEzZTEwZmNkIiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9)
-
----
-
-## 🛠 Tools & Skills
-
-* Power BI
-* DAX (Calculated Measures, KPIs)
-* Data Visualization & Dashboard Design
-* Business Analysis (Hospitality Domain)
 
 ---
 
@@ -105,3 +117,6 @@ The objective is to identify root causes and recommend data-driven strategies to
 * Designing dashboards for **decision-making, not just visualization**
 
 ---
+
+## 👤 Author
+Aditya Dhiman
