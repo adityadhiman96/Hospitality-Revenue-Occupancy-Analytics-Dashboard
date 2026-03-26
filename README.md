@@ -1,6 +1,9 @@
 # 🏨 Hospitality Revenue Performance Dashboard (Power BI)
 
 ## 📌 Overview
+<p align="center">
+  <img src="images/Dashboard.png" width="800"/>
+</p>
 
 This project analyzes hotel performance across multiple cities to identify revenue decline, pricing inefficiencies, and booking behavior patterns.
 
