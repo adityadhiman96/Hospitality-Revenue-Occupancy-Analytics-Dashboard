@@ -1,6 +1,6 @@
-# 🏨 Hospitality Revenue Performance Dashboard (Power BI)
+# Hospitality Revenue Performance Dashboard (Power BI)
 
-## 📌 Overview
+## Overview
 <p align="center">
   <img src="images/Dashboard.png" width="800"/>
 </p>
@@ -11,14 +11,14 @@ The objective is to help hotel management teams optimize pricing, improve occupa
 
 ---
 
-## 🎯 Business Problem
+## Business Problem
 
 The hospitality business is experiencing a **decline in revenue despite stable occupancy levels**.
 The objective is to identify root causes and recommend data-driven strategies to improve performance.
 
 ---
 
-## 📊 Key Metrics Used
+## Key Metrics Used
 
 * Revenue: 1.70Bn
 * RevPAR: 7.41K
@@ -28,7 +28,7 @@ The objective is to identify root causes and recommend data-driven strategies to
 
 ---
 
-## 🔍 Key Insights
+## Key Insights
 
 * Revenue declined by ~22% despite stable occupancy → indicates pricing inefficiencies
 * Weekends show same ADR and RevPAR as weekdays, indicating static pricing strategy
@@ -39,7 +39,7 @@ The objective is to identify root causes and recommend data-driven strategies to
 
 ---
 
-## 📊 Dashboard Features
+## Dashboard Features
 * Dynamic time filtering (Week-wise analysis)
 * City & Property-level drill-down
 * Room class segmentation
@@ -49,7 +49,7 @@ The objective is to identify root causes and recommend data-driven strategies to
 
 ---
 
-## 🏗️ Data Model
+## Data Model
 * Designed using Star Schema for performance optimization
 * Tables:
   Fact Table - Bookings, Aggregated_Bookings
@@ -57,7 +57,7 @@ The objective is to identify root causes and recommend data-driven strategies to
 
 ---
 
-## ⚙️ Tools & Skills
+## Tools & Skills
 * Power BI
 * DAX (Data Analysis Expressions)
 * Data Modeling
@@ -65,7 +65,7 @@ The objective is to identify root causes and recommend data-driven strategies to
 
 ---
 
-## 🚀 Recommendations
+## Recommendations
 
 * Implement dynamic pricing strategies based on demand
 * Increase prices during high-demand weekends
@@ -75,34 +75,34 @@ The objective is to identify root causes and recommend data-driven strategies to
 
 ---
 
-## 🌐 Live Dashboard
+## Live Dashboard
 
-👉 [Click here to view the interactive dashboard](https://app.powerbi.com/view?r=eyJrIjoiZDMxYTQyODgtZGRiZC00ZjFlLWEzYzAtMzM5ZDEzZTEwZmNkIiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9)
+[Click here to view the interactive dashboard](https://app.powerbi.com/view?r=eyJrIjoiZDMxYTQyODgtZGRiZC00ZjFlLWEzYzAtMzM5ZDEzZTEwZmNkIiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9)
 
 ---
 
-## 📷 Preview
+## Preview
 
 * [Dashboard](images/Dashboard.png)
 * [Data Model](images/Data_Model.png)
 
 ---
 
-## 📂 Dataset & Data Modeling
+## Dataset & Data Modeling
 
 * Analyzed 10,000+ records of hotel booking data
 * Designed a Star Schema data model for efficient analysis
 
 ---
 
-## 🔗 Relationships:
+## Relationships:
 
 * One-to-Many relationships from dimension tables to fact table
 * Enabled fast aggregations and scalable analysis
 
 ---
 
-## ⚙️ Data Modeling Approach
+## Data Modeling Approach
 * Cleaned and transformed raw data using Power Query
 * Built a star schema to improve performance and simplify DAX
 * Created measures instead of calculated columns for flexibility
@@ -110,7 +110,7 @@ The objective is to identify root causes and recommend data-driven strategies to
 
 ---
 
-## 💡 What I Learned
+## What I Learned
 
 * Translating business problems into analytical dashboards
 * Identifying revenue drivers using KPIs like RevPAR & ADR
@@ -118,5 +118,5 @@ The objective is to identify root causes and recommend data-driven strategies to
 
 ---
 
-## 👤 Author
+## Author
 Aditya Dhiman
