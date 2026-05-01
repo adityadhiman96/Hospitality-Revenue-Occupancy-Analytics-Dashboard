@@ -30,7 +30,7 @@ The objective is to identify root causes and recommend data-driven strategies to
 
 ## Key Insights
 
-* Revenue declined by ~22% despite stable occupancy → indicates pricing inefficiencies
+* Revenue declined by ~22% despite stable occupancy, indicating pricing inefficiencies
 * Weekends show same ADR and RevPAR as weekdays, indicating static pricing strategy
 * High cancellations & no-shows (~40K+) are significantly impacting realized revenue
 * Mumbai leads in revenue generation, while some cities underperform in RevPAR
