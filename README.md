@@ -18,13 +18,6 @@ End-to-end analysis of 134K+ hotel bookings across 4 Indian cities (May–Jul 20
 
 ---
 
-## Objective
-Hotels track revenue and occupancy separately, but rarely look at how the two interact. This project asks one question:
-* Is revenue being lost because of low demand, or because of how rooms are priced and managed?
-The objective is to help hotel management teams optimize pricing, improve occupancy, and maximize revenue using data-driven insights.
-
----
-
 ## Business Problem
 
 The hospitality industry faces challenges in maximizing revenue while balancing occupancy, pricing, and booking efficiency.
@@ -35,6 +28,9 @@ Management required a centralized solution to:
 * Identify revenue leakage caused by cancellations and no-shows.
 * Understand customer behavior and booking patterns.
 * Support pricing and demand-management decisions.
+
+This project asks one question:
+* *Is revenue being lost because of low demand, or because of how rooms are priced and managed?*
 
 ---
 
@@ -58,65 +54,55 @@ Notebook: [`Hospitality_Analysis.ipynb`](https://github.com/adityadhiman96/Power
 * Independent Analysis (Ad-Hoc)
   - Occupancy by room class, city, and weekday vs. weekend
   - Month-on-month revenue trends
-  - ADR vs. Occupancy % — dual-axis monthly trend
+  - ADR vs. Occupancy % - dual-axis monthly trend
   - Revenue per booking by platform
   - Cancellation rate by city
   - Rating distribution by room class (Seaborn boxplot)
 
+## Part 2 — Power BI Dashboard
+File: [`hospitality_dashboard.pbix`](https://app.powerbi.com/view?r=eyJrIjoiZDMxYTQyODgtZGRiZC00ZjFlLWEzYzAtMzM5ZDEzZTEwZmNkIiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9)
 
+* An executive dashboard built on the cleaned/aggregated data, featuring:
+  - KPI cards with week-over-week change: Revenue, RevPAR, ADR, Occupancy %, Realization %
+  - Trend chart tracking ADR, RevPAR, and Occupancy % across 13 weeks
+  - Realization % and Average ADR acorss all booking platforms
+  - Booking Funnel: Capacity > Total Bookings > Successful > Cancelled > No-Show
+  - Performance Matrix: City & Property-level drill-down scatter of ADR vs. Occupancy % to flag pricing/demand mismatches
+  - Breakdowns by day type (weekday/weekend), city, property, and revenue category (Luxury vs. Business)
+  - Built-in Key Findings and Recommendations panel for stakeholder consumption
 
----
+* Data Model
+  - Designed using Star Schema for performance optimization
+  - Tables:
+    Fact Table - Bookings, Aggregated_Bookings
+    Dimension Tables - Date, Hotels, Room
 
-## Key Insights
+* Key Findings
+  -	Inverse ADR–Occupancy relationship — May had high occupancy/low ADR; July had high ADR/low occupancy
+  -	Revenue per booking is nearly flat across platforms (Direct Offline ₹12,791 vs. Direct Online ₹12,634)
+  -	Cancellation rates are uniform across cities (~24.6%–25.0%)
+  -	Ratings are nearly identical across room classes (3.59–3.69)
+  -	Revenue declined ~22% despite stable occupancy
 
-* Revenue declined by ~22% despite stable occupancy, indicating pricing inefficiencies
-* Weekends show same ADR and RevPAR as weekdays, indicating static pricing strategy
-* High cancellations & no-shows (~40K+) are significantly impacting realized revenue
-* Mumbai leads in revenue generation, while some cities underperform in RevPAR
-* Hyderabad shows lower RevPAR, indicating an underperforming market
-* Luxury category contributes higher revenue compared to business hotels
-
----
-
-## Dashboard Features
-* Dynamic time filtering (Week-wise analysis)
-* City & Property-level drill-down
-* Room class segmentation
-* Trend analysis of key metrics
-* Performance matrix (ADR vs Occupancy)
-* Day-type comparison (Weekday vs Weekend)
-
----
-
-## Data Model
-* Designed using Star Schema for performance optimization
-* Tables:
-  Fact Table - Bookings, Aggregated_Bookings
-  Dimension Tables - Date, Hotels, Room
-
----
-
-## Tools & Skills
-* Power BI
-* DAX (Data Analysis Expressions)
-* Data Modeling
-* Business Intelligence
+* Business Impact
+- Pricing is not optimized properties trade off rate vs. volume instead of balancing both, directly limiting RevPAR
+- Platform mix is not the lever, overall demand generation matters more than channel optimization
+- Cancellations are a policy-level problem (prepayment, refund terms), not a city-specific demand issue
+- Guest satisfaction is driven by overall service quality, not room tier, service investment outperforms room upgrades
+- Confirms the pricing inefficiency identified in Python, the same signal shows up independently in both analyses
 
 ---
 
 ## Recommendations
-
-* Implement dynamic pricing strategies based on demand
-* Increase prices during high-demand weekends
-* Reduce cancellations through advance booking incentives
-* Improve underperforming markets (e.g., Hyderabad)
-* Focus on optimizing RevPAR instead of just occupancy
+* Dynamic pricing - raise ADR during high-occupancy periods instead of trading rate for volume
+* Cancellation policy review - introduce prepayment/cancellation fees given the uniform ~25% rate across all cities
+* Service quality investment - prioritize staff training and guest experience over premium room upgrades
+* Direct booking incentives - leverage the slightly higher per-booking revenue from Direct Offline through loyalty programs
 
 ---
 
-## Live Dashboard
-
-[Click here to view the interactive dashboard](https://app.powerbi.com/view?r=eyJrIjoiZDMxYTQyODgtZGRiZC00ZjFlLWEzYzAtMzM5ZDEzZTEwZmNkIiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9)
+## The One-Line Takeaway
+-> Revenue is not seeing and increasing trend because of **pricing strategy, cancellation policy, and service consistency**, all of the problems are operationally fixable without acquiring new customers.
 
 ---
 
@@ -127,25 +113,8 @@ Notebook: [`Hospitality_Analysis.ipynb`](https://github.com/adityadhiman96/Power
 
 ---
 
-## Dataset & Data Modeling
-
-* Analyzed 10,000+ records of hotel booking data
-* Designed a Star Schema data model for efficient analysis
-
----
-
-## Relationships:
-
-* One-to-Many relationships from dimension tables to fact table
-* Enabled fast aggregations and scalable analysis
-
----
-
-## Data Modeling Approach
-* Cleaned and transformed raw data using Power Query
-* Built a star schema to improve performance and simplify DAX
-* Created measures instead of calculated columns for flexibility
-* Used context-aware DAX for KPIs like RevPAR, ADR, and Occupancy
+## Tech Stack
+`Python` · `Pandas` · `Matplotlib` · `Seaborn` · `Power BI` · `DAX` · `Power Query`
 
 ---
 
