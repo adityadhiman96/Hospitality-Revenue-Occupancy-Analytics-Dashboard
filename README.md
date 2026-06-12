@@ -103,7 +103,7 @@ File: [`hospitality_dashboard.pbix`](https://app.powerbi.com/view?r=eyJrIjoiZDMx
 ---
 
 ## The One-Line Takeaway
--> Revenue is not seeing and increasing trend because of **pricing strategy, cancellation policy, and service consistency**, all of the problems are operationally fixable without acquiring new customers.
+-> Revenue is not increasing because of **pricing strategy, cancellation policy, and service consistency**, not because of weak demand. All of the problems are operationally fixable without acquiring new customers.
 
 ---
 
