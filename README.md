@@ -1,4 +1,4 @@
-# Hospitality Revenue Performance Dashboard (Power BI)
+# Hospitality Revenue Performance Dashboard - End-to-End Analytics Solution using Python, Pandas & Power BI
 
 ## Overview
 <p align="center">
