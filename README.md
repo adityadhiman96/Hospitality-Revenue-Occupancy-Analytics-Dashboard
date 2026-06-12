@@ -1,4 +1,6 @@
-# Hospitality Revenue Performance Dashboard - End-to-End Analytics Solution using Python, Pandas & Power BI
+# Hospitality Revenue & Occupancy Analytics
+
+End-to-end analysis of 134K+ hotel bookings across 4 Indian cities (May–Jul 2022), combining Python EDA with a Power BI executive dashboard to uncover pricing, cancellation, and service-quality inefficiencies.
 
 ## Overview
 <p align="center">
@@ -9,8 +11,16 @@
   <img src="images/ADR_vs_occ_pct.jpeg" width="800"/>
 </p>
 
-Developed a complete analytics workflow to analyze hotel booking performance, uncover revenue leakage, and deliver actionable business recommendations through exploratory data analysis and interactive dashboards.
+* Domain - Hospitality / Hotel Revenue Management
+* Tools - Python (Pandas, Matplotlib, Seaborn), Power BI, DAX
+* Dataset - 5 tables · 134,576 bookings · 25 properties · 4 cities
+* Deliverables - Jupyter Notebook (EDA) + Power BI Dashboard (.pbix)
 
+---
+
+## Objective
+Hotels track revenue and occupancy separately, but rarely look at how the two interact. This project asks one question:
+* Is revenue being lost because of low demand, or because of how rooms are priced and managed?
 The objective is to help hotel management teams optimize pricing, improve occupancy, and maximize revenue using data-driven insights.
 
 ---
@@ -28,13 +38,32 @@ Management required a centralized solution to:
 
 ---
 
-## Key Metrics Used
+## Part 1 — Python EDA
+Notebook: [`Hospitality_Analysis.ipynb`](https://github.com/adityadhiman96/PowerBI-Hospitality-Revenue-Performance-Dashboard/blob/main/notebook/Hospitality_Analysis.ipynb)
+* Data Cleaning
+  - Removed records with invalid `no_guests` (≤0) — <1% of data
+  - Applied the 3-sigma rule to detect and remove outliers in `revenue_generated`
+  - Validated `revenue_realized` outliers against room category (RT4 / Presidential) before deciding not to remove them — avoided over-cleaning legitimate       luxury pricing
+  - Filled missing `capacity` values using median
+  - Removed rows where `successful_bookings > capacity` (logically invalid)
+  - Retained ~80K null values in `ratings_given` rather than imputing — avoided distorting guest sentiment data
 
-* Revenue: 1.70Bn
-* RevPAR: 7.41K
-* Occupancy Rate: 57.8%
-* ADR (Average Daily Rate): 12.69K
-* Realization Rate: 70.1%
+* KPIs Engineered
+  - ADR (Average Daily Rate)	Total Revenue ÷ Total Bookings
+  - RevPAR (Revenue per Available Room)	Total Revenue ÷ Total Capacity
+  - Occupancy %	Successful Bookings ÷ Capacity × 100
+  - Realization %	Revenue Realized ÷ Revenue Generated × 100
+  - Cancellation Rate	Cancelled Bookings ÷ Total Bookings × 100
+
+* Independent Analysis (Ad-Hoc)
+  - Occupancy by room class, city, and weekday vs. weekend
+  - Month-on-month revenue trends
+  - ADR vs. Occupancy % — dual-axis monthly trend
+  - Revenue per booking by platform
+  - Cancellation rate by city
+  - Rating distribution by room class (Seaborn boxplot)
+
+
 
 ---
 
