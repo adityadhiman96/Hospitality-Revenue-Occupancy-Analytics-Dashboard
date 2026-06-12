@@ -37,19 +37,19 @@ This project asks one question:
 ## Part 1 — Python EDA
 Notebook: [`Hospitality_Analysis.ipynb`](https://github.com/adityadhiman96/PowerBI-Hospitality-Revenue-Performance-Dashboard/blob/main/notebook/Hospitality_Analysis.ipynb)
 * Data Cleaning
-  - Removed records with invalid `no_guests` (≤0) — <1% of data
+  - Removed records with invalid `no_guests` (≤0) - <1% of data
   - Applied the 3-sigma rule to detect and remove outliers in `revenue_generated`
-  - Validated `revenue_realized` outliers against room category (RT4 / Presidential) before deciding not to remove them — avoided over-cleaning legitimate       luxury pricing
+  - Validated `revenue_realized` outliers against room category (RT4 / Presidential) before deciding not to remove them - avoided over-cleaning legitimate       luxury pricing
   - Filled missing `capacity` values using median
   - Removed rows where `successful_bookings > capacity` (logically invalid)
-  - Retained ~80K null values in `ratings_given` rather than imputing — avoided distorting guest sentiment data
+  - Retained ~80K null values in `ratings_given` rather than imputing - avoided distorting guest sentiment data
 
 * KPIs Engineered
-  - ADR (Average Daily Rate)	Total Revenue ÷ Total Bookings
-  - RevPAR (Revenue per Available Room)	Total Revenue ÷ Total Capacity
-  - Occupancy %	Successful Bookings ÷ Capacity × 100
-  - Realization %	Revenue Realized ÷ Revenue Generated × 100
-  - Cancellation Rate	Cancelled Bookings ÷ Total Bookings × 100
+  - ADR (Average Daily Rate) = Total Revenue / Total Bookings
+  - RevPAR (Revenue per Available Room) =	Total Revenue / Total Capacity
+  - Occupancy %	= Successful Bookings / Capacity × 100
+  - Realization %	= Revenue Realized / Revenue Generated × 100
+  - Cancellation Rate	= Cancelled Bookings / Total Bookings × 100
 
 * Independent Analysis (Ad-Hoc)
   - Occupancy by room class, city, and weekday vs. weekend
@@ -58,6 +58,7 @@ Notebook: [`Hospitality_Analysis.ipynb`](https://github.com/adityadhiman96/Power
   - Revenue per booking by platform
   - Cancellation rate by city
   - Rating distribution by room class (Seaborn boxplot)
+
 
 ## Part 2 — Power BI Dashboard
 File: [`hospitality_dashboard.pbix`](https://app.powerbi.com/view?r=eyJrIjoiZDMxYTQyODgtZGRiZC00ZjFlLWEzYzAtMzM5ZDEzZTEwZmNkIiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9)
@@ -85,11 +86,11 @@ File: [`hospitality_dashboard.pbix`](https://app.powerbi.com/view?r=eyJrIjoiZDMx
   -	Revenue declined ~22% despite stable occupancy
 
 * Business Impact
-- Pricing is not optimized properties trade off rate vs. volume instead of balancing both, directly limiting RevPAR
-- Platform mix is not the lever, overall demand generation matters more than channel optimization
-- Cancellations are a policy-level problem (prepayment, refund terms), not a city-specific demand issue
-- Guest satisfaction is driven by overall service quality, not room tier, service investment outperforms room upgrades
-- Confirms the pricing inefficiency identified in Python, the same signal shows up independently in both analyses
+  - Pricing is not optimized properties trade off rate vs. volume instead of balancing both, directly limiting RevPAR
+  - Platform mix is not the lever, overall demand generation matters more than channel optimization
+  - Cancellations are a policy-level problem (prepayment, refund terms), not a city-specific demand issue
+  - Guest satisfaction is driven by overall service quality, not room tier, service investment outperforms room upgrades
+  - Confirms the pricing inefficiency identified in Python, the same signal shows up independently in both analyses
 
 ---
 
@@ -110,19 +111,12 @@ File: [`hospitality_dashboard.pbix`](https://app.powerbi.com/view?r=eyJrIjoiZDMx
 
 * [Dashboard](images/Dashboard.png)
 * [Data Model](images/Data_Model.png)
+* [Notebook](images/ADR_vs_occ_pct.jpeg)
 
 ---
 
 ## Tech Stack
 `Python` · `Pandas` · `Matplotlib` · `Seaborn` · `Power BI` · `DAX` · `Power Query`
-
----
-
-## What I Learned
-
-* Translating business problems into analytical dashboards
-* Identifying revenue drivers using KPIs like RevPAR & ADR
-* Designing dashboards for **decision-making, not just visualization**
 
 ---
 
