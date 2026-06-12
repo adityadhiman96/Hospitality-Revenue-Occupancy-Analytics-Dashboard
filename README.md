@@ -79,7 +79,7 @@ File: [`hospitality_dashboard.pbix`](https://app.powerbi.com/view?r=eyJrIjoiZDMx
     Dimension Tables - Date, Hotels, Room
 
 * Key Findings
-  -	Inverse ADR–Occupancy relationship — May had high occupancy/low ADR; July had high ADR/low occupancy
+  -	Inverse ADR–Occupancy relationship - May had high occupancy/low ADR; July had high ADR/low occupancy
   -	Revenue per booking is nearly flat across platforms (Direct Offline ₹12,791 vs. Direct Online ₹12,634)
   -	Cancellation rates are uniform across cities (~24.6%–25.0%)
   -	Ratings are nearly identical across room classes (3.59–3.69)
