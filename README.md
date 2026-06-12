@@ -5,6 +5,10 @@
   <img src="images/Dashboard.png" width="800"/>
 </p>
 
+<p align="center">
+  <img src="images/ADR_vs_occ_pct.png" width="800"/>
+</p>
+
 Developed a complete analytics workflow to analyze hotel booking performance, uncover revenue leakage, and deliver actionable business recommendations through exploratory data analysis and interactive dashboards.
 
 The objective is to help hotel management teams optimize pricing, improve occupancy, and maximize revenue using data-driven insights.
