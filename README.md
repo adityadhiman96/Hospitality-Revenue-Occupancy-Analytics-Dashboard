@@ -8,7 +8,7 @@ End-to-end analysis of 134K+ hotel bookings across 4 Indian cities (May–Jul 20
 </p>
 
 <p align="center">
-  <img src="images/ADR_vs_occ_pct.jpeg" width="800"/>
+  <img src="images/rating_distribution_room_class.jpeg" width="800"/>
 </p>
 
 * Domain - Hospitality / Hotel Revenue Management
@@ -111,7 +111,8 @@ File: [`hospitality_dashboard.pbix`](https://app.powerbi.com/view?r=eyJrIjoiZDMx
 
 * [Dashboard](images/Dashboard.png)
 * [Data Model](images/Data_Model.png)
-* [Notebook](images/ADR_vs_occ_pct.jpeg)
+* [ADR vs Occupancy%](images/ADR_vs_occ_pct.jpeg)
+* [Correlation between room class and ratings](images/rating_distribution_room_class.jpeg)
 
 ---
 
