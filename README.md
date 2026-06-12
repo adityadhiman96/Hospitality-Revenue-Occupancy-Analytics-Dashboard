@@ -5,7 +5,7 @@
   <img src="images/Dashboard.png" width="800"/>
 </p>
 
-This project presents an end-to-end Power BI dashboard built to analyze hospitality revenue performance across multiple cities, properties, and booking channels.
+Developed a complete analytics workflow to analyze hotel booking performance, uncover revenue leakage, and deliver actionable business recommendations through exploratory data analysis and interactive dashboards.
 
 The objective is to help hotel management teams optimize pricing, improve occupancy, and maximize revenue using data-driven insights.
 
@@ -13,8 +13,14 @@ The objective is to help hotel management teams optimize pricing, improve occupa
 
 ## Business Problem
 
-The hospitality business is experiencing a **decline in revenue despite stable occupancy levels**.
-The objective is to identify root causes and recommend data-driven strategies to improve performance.
+The hospitality industry faces challenges in maximizing revenue while balancing occupancy, pricing, and booking efficiency.
+
+Management required a centralized solution to:
+* Monitor revenue performance across properties and cities.
+* Track KPIs such as RevPAR, ADR, Occupancy %, and Realization %.
+* Identify revenue leakage caused by cancellations and no-shows.
+* Understand customer behavior and booking patterns.
+* Support pricing and demand-management decisions.
 
 ---
 
